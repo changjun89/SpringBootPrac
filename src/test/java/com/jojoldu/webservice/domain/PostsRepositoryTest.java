@@ -28,16 +28,16 @@ public class PostsRepositoryTest {
     }
 
     @Test
-    public void °Ô½Ã±ÛÀúÀå_ºÒ·¯¿À±â() {
+    public void ê²Œì‹œê¸€ì €ì¥_ë¶ˆëŸ¬ì˜¤ê¸°() {
     }
 
     @Test
-    public void BaseTimeEntity_µî·Ï () {
+    public void BaseTimeEntity_ë“±ë¡ () {
         //given
         LocalDateTime now = LocalDateTime.now();
         postsRepository.save(Posts.builder()
-                .title("Å×½ºÆ® °Ô½Ã±Û")
-                .content("Å×½ºÆ® º»¹®")
+                .title("í…ŒìŠ¤íŠ¸ ê²Œì‹œê¸€")
+                .content("í…ŒìŠ¤íŠ¸ ë³¸ë¬¸")
                 .author("jojoldu@gmail.com")
                 .build());
         //when

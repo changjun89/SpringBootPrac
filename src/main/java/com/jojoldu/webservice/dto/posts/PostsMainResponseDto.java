@@ -23,7 +23,7 @@ public class PostsMainResponseDto {
     }
 
     /**
-     * Java 8 ¹öÀü
+     * Java 8 ë²„ì „
      */
     private String toStringDateTime(LocalDateTime localDateTime){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
@@ -33,7 +33,7 @@ public class PostsMainResponseDto {
     }
 
     /**
-     * Java 7 ¹öÀü
+     * Java 7 ë²„ì „
      */
     private String toStringDateTimeByJava7(LocalDateTime localDateTime){
         if(localDateTime == null){
