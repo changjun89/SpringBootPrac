@@ -12,9 +12,7 @@ public class Application {
             + "/app/config/springboot-webservice/real-application.yml";
     
 	public static void main(String[] args) {
-        new SpringApplicationBuilder(Application.class)
-        .properties(APPLICATION_LOCATIONS)
-        .run(args);
+        new SpringApplicationBuilder(Application.class).properties(APPLICATION_LOCATIONS).run(args);
 	}
 
 }
