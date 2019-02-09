@@ -23,8 +23,26 @@ var main = {
         }).fail(function (error) {
             alert(error);
         });
-    }
-
+    },
+    deletePost : function () {
+        var data = {
+            title: $('#title').val(),
+            author: $('#author').val(),
+            content: $('#content').val()
+        };
+        $.ajax({
+            type: 'POST',
+            url: '/delPost',
+            dataType: 'json',
+            contentType:'application/json; charset=utf-8',
+            data: JSON.stringify(data)
+        }).done(function() {
+            alert('삭제완료되었습니다.');
+            location.reload();
+        }).fail(function (error) {
+            alert(error);
+        });
+    },
 };
 
 main.init();
