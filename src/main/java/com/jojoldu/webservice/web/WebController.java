@@ -19,4 +19,10 @@ public class WebController {
         model.addAttribute("posts", postsService.findAllDesc());
         return "main";
     }
+    
+    @GetMapping("/delPost")
+    public String delPost(Model model) {
+        model.addAttribute("posts", postsService.findAllDesc());
+        return "main";
+    }
 }

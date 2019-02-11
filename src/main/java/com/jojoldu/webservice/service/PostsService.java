@@ -23,6 +23,11 @@ public class PostsService {
         return postsRepository.save(dto.toEntity()).getId();
     }
     
+    @Transactional
+    public void delete(PostsSaveRequestDto dto){
+       postsRepository.delete(dto.toEntity().getId());
+    }
+    
     @Transactional(readOnly = true)
     public List<PostsMainResponseDto> findAllDesc() {
         return postsRepository.findAllDesc()
