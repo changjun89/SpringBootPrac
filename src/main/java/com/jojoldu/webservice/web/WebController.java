@@ -3,7 +3,9 @@ package com.jojoldu.webservice.web;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
+import com.jojoldu.webservice.domain.posts.Posts;
 import com.jojoldu.webservice.service.PostsService;
 
 import lombok.AllArgsConstructor;
@@ -20,9 +22,5 @@ public class WebController {
         return "main";
     }
     
-    @GetMapping("/delPost")
-    public String delPost(Model model) {
-        model.addAttribute("posts", postsService.findAllDesc());
-        return "main";
-    }
+    
 }

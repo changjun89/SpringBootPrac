@@ -46,4 +46,19 @@ public class PostServiceTest {
         assertThat(posts.getContent()).isEqualTo(dto.getContent());
         assertThat(posts.getTitle()).isEqualTo(dto.getTitle());
     }
+    
+    
+    @Test
+    public void Dto데이터가_post_삭제한다 () {
+        //given
+        PostsSaveRequestDto dto = PostsSaveRequestDto.builder()
+                .author("jojoldu@gmail.com")
+                .content("테스트")
+                .title("테스트 타이틀")
+                .build();
+
+        //when
+        postsService.delete(dto);
+
+    }
 }

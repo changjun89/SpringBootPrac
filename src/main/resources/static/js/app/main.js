@@ -4,6 +4,10 @@ var main = {
         $('#btn-save').on('click', function () {
             _this.save();
         });
+        $('#btn-delButton').on('click', function () {
+            _this.deletePost();
+        });
+        
     },
     save : function () {
         var data = {
@@ -30,6 +34,7 @@ var main = {
             author: $('#author').val(),
             content: $('#content').val()
         };
+        confirm("삭제하시겠습니까?");
         $.ajax({
             type: 'POST',
             url: '/delPost',

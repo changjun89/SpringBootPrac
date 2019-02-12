@@ -23,7 +23,6 @@ public class PostsService {
         return postsRepository.save(dto.toEntity()).getId();
     }
     
-    @Transactional
     public void delete(PostsSaveRequestDto dto){
        postsRepository.delete(dto.toEntity().getId());
     }
