@@ -33,11 +33,6 @@ public class WebRestController {
         return postsService.save(dto);
     }
     
-    @GetMapping("/delPost")
-    public void delPost(@RequestBody PostsSaveRequestDto dto) {
-    	postsService.delete(dto);
-    }
-    
     @GetMapping("/profile")
     public String getProfile () {
         return Arrays.stream(env.getActiveProfiles()).filter(e -> "set1".equals(e) || "set2".equals(e)).findFirst().orElse("");
